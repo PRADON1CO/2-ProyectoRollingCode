@@ -48,3 +48,79 @@ body {
     transform: scale(1.01); 
   }
   
+  /* login */
+  .login-box {
+    width: 100%;
+    border-radius: 4px;
+    margin-top: 50px;
+  }
+  
+  .login-box h2 {
+    color: #0a0a0a;
+    font-size: 2rem;
+  }
+  
+  form .input-box {
+    position: relative;
+    height: 50px;
+    margin-bottom: 16px;
+  }
+  
+  form p,
+  a {
+    font-size: 17px;
+  }
+  
+  .input-box input {
+    height: 100%;
+    width: 100%;
+    border-radius: 4px;
+    background: #333;
+    outline: none;
+    border: none;
+    color: #f8f5f5;
+    font-size: 1rem;
+  }
+  
+  .input-box label {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    color: #8c8c8c;
+    pointer-events: none;
+    font-size: 1rem;
+    transform: translateY(-50%);
+    transition: all 0.1s ease;
+  }
+  
+  .boton-iniciar-sesion {
+    height: 50px;
+    background: rgb(49, 145, 121);
+    background: linear-gradient(
+      0deg,
+      rgb(49, 145, 116) 10%,
+      rgb(68, 205, 153) 50%
+    );
+    color: black;
+    font-weight: 500;
+    font-size: 18px;
+  }
+  
+  .boton-iniciar-sesion:hover {
+    color: black;
+  }
+  
+  .recuerdame-container label,
+  .recuerdame-container a {
+    font-size: 14px;
+  }
+  
+  .input-box input:is(:focus, :valid) ~ label {
+    font-size: 0.75rem;
+    transform: translateY(-130%);
+  }
+  
+  .input-box input:is(:focus, :valid) {
+    padding: 16px 20px 0;
+    background: #444;
+  }
