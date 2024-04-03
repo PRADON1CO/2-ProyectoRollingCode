@@ -4,3 +4,47 @@
     margin: 0;
     box-sizing: border-box;
 }
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: #f5f5f5;
+  }
+  
+  main {
+    flex-grow: 1;
+  }
+  
+  .bgFooter {
+    background: #042b2c;
+  }
+  
+  .imgLogoNav {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    border-radius: 10px;
+  }
+  
+  .imgLogoFooter {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+  }
+  
+  .btn-outline-verde{
+    color: #042b2c;
+    border-color: #042b2c;
+  }
+  
+  .btn-outline-verde:hover{
+    background-color: #042b2c;
+    color: #fff;
+  }
+  
+  .card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transform: scale(1.01); 
+  }
+  
