@@ -54,6 +54,11 @@ body {
     border-radius: 4px;
     margin-top: 50px;
   }
+
+  .login-main {
+    background-color:#96c9b0ab
+    ;
+  }
   
   .login-box h2 {
     color: #0a0a0a;
@@ -109,12 +114,7 @@ body {
   .boton-iniciar-sesion:hover {
     color: black;
   }
-  
-  .recuerdame-container label,
-  .recuerdame-container a {
-    font-size: 14px;
-  }
-  
+
   .input-box input:is(:focus, :valid) ~ label {
     font-size: 0.75rem;
     transform: translateY(-130%);
