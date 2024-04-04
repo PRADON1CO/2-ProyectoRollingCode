@@ -50,14 +50,13 @@ body {
   
   /* login */
   .login-box {
-    width: 100%;
+    width: 30%;
     border-radius: 4px;
     margin-top: 50px;
   }
 
   .login-main {
-    background-color:#96c9b0ab
-    ;
+    background-color:#96c9b0ab;
   }
   
   .login-box h2 {
@@ -124,3 +123,27 @@ body {
     padding: 16px 20px 0;
     background: #444;
   }
+
+  .login-main {
+    backdrop-filter: blur(3px);
+  }
+
+  .login-box {
+    width: 30%;
+    background: rgba(0, 0, 0, 0.599);
+    margin: 49px 0;
+    padding: 70px 14px;
+  }
+
+  .body-login {
+    background-image: url("../img/background-login.jpg");
+    background-position: center;
+    background-repeat: repeat;
+  }
+
+
+@media (max-width: 991px) {
+  .login-box {
+    width: 100%;
+  }
+}
