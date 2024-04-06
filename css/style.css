@@ -48,3 +48,7 @@ body {
     transform: scale(1.01); 
   }
   
+  .smaller-img {
+    width: 50%; 
+    height: auto;
+}
