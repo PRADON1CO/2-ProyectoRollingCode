@@ -49,34 +49,16 @@ body {
   }
   
 
-/* boton error e imagen error*/
-.boton-error{
-    top: 134px;
-    left: 12px;
-    padding: 7px 36px;
-    background: linear-gradient(
-      0deg,
-      rgb(49, 145, 116) 10%,
-      rgb(68, 205, 153) 50%   
-      );
-}
+/* imagen error*/
+
 
 @media (max-width: 576px){
-.boton-error{
-    top: 130px;
-    left: 6px; 
-}
 .img-error {
   height: 89vh;
   object-fit: cover;
 }
 }
-@media all and (min-width: 577px) and (max-width: 769px) {
-    .boton-error{
-        top: 132px;
-        left: 6px;
-    }
-}
+
 @media all and (min-width: 767px) and (max-width: 1200px) {
   .img-error {
     height: 89vh;
