@@ -38,7 +38,11 @@ function altaJuego() {
     desarrollador.value
   );
   listaJuegos.push(juegoNuevo);
-  console.log(listaJuegos);
+  guardarLocalStorage();
+}
+
+function guardarLocalStorage() {
+  localStorage.setItem("listaJuegosKey", JSON.stringify(listaJuegos));
 }
 
 btnAgregarJuego.addEventListener("click", mostrarModalJuego);
