@@ -90,4 +90,17 @@ export default class Juego {
   set desarrollador(nuevoDesarrollador) {
     this.#desarrollador = nuevoDesarrollador;
   }
+
+  toJSON() {
+    return {
+      codigo: this.codigo,
+      nombre: this.nombre,
+      descripcion: this.descripcion,
+      precio: this.precio,
+      imagen: this.imagen,
+      categoria: this.categoria,
+      requisitos: this.requisitos,
+      desarrollador: this.desarrollador,
+    };
+  }
 }
