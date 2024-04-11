@@ -1,4 +1,4 @@
-class Pelicula {
+export default class Juego {
   #codigo;
   #nombre;
   #descripcion;

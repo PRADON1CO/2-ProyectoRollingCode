@@ -1,3 +1,5 @@
+import Juego from "./classJuego.js";
+
 const btnAgregarJuego = document.getElementById("btnAgregarJuego");
 const modalJuego = new bootstrap.Modal(document.getElementById("modalJuego"));
 let crearJuego = true;
