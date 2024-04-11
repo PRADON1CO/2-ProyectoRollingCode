@@ -48,6 +48,23 @@ body {
     transform: scale(1.01); 
   }
   
+
+/* imagen error*/
+
+
+@media (max-width: 576px){
+.img-error {
+  height: 89vh;
+  object-fit: cover;
+}
+}
+
+@media all and (min-width: 767px) and (max-width: 1200px) {
+  .img-error {
+    height: 89vh;
+    object-fit: cover;
+  }
+}
   /* login */
   .login-box {
     width: 30%;
