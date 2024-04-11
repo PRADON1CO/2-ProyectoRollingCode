@@ -10,8 +10,13 @@ function mostrarModalJuego() {
 
 function administrarFormJuego(e) {
   e.preventDefault();
+  if (crearJuego === true) {
+    altaJuego();
+  } else {
+  }
 }
 
+function altaJuego() {}
 
 btnAgregarJuego.addEventListener("click", mostrarModalJuego);
 formJuego.addEventListener("submit", administrarFormJuego);
