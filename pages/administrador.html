@@ -126,6 +126,73 @@
         </section>
     </main>
 
+    <div class="modal fade" id="modalJuegos" tabindex="-1" aria-labelledby="modalJuegoLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Administrar Juego</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="codigo">Código</label>
+                            <input id="codigo" type="text" class="form-control" placeholder="123" maxlength="5"
+                                minlength="1" disabled />
+                        </div>
+                        <div class="mb-3">
+                            <label for="nombre">Nombre *</label>
+                            <input id="nombre" type="text" class="form-control" placeholder="Ej: Call of duty" />
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="descripcion">Descripcion *</label>
+                            <textarea id="descripcion" rows="4" class="form-control"
+                                placeholder="Ej: El juego es el sucesor espiritual del videojuego Medal of Honor: Allied Assault , que simula la infantería y armas combinadas de la Segunda Guerra Mundial."></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="precio">Precio *</label>
+                            <input id="precio" type="text" class="form-control" placeholder="Ej: 59.99" />
+                        </div>
+                        <div class="mb-3">
+                            <label for="imagen">Imagen *</label>
+                            <input id="imagen" type="text" class="form-control"
+                                placeholder="Ej: http://127.0.0.1:5500/pages/administrador.html" maxlength="120"
+                                minlength="2" />
+                        </div>
+                        <div class="mb-3">
+                            <label for="categoria">Categoria *</label>
+                            <select id="categoria" class="form-control">
+                                <option value="">Selecione una opción</option>
+                                <option value="Accion">Accion</option>
+                                <option value="Simulacion">Simulacion</option>
+                                <option value="Fabricacion">Fabricacion</option>
+                                <option value="Aventura">Aventura</option>
+                                <option value="Construccion">Construccion</option>
+                                <option value="Sandbox">Sandbox</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="requisitos">Requisitos del sistema *</label>
+                            <textarea id="requisitos" rows="5" class="form-control"
+                                placeholder="Ej: Requiere tarjeta aceleradora 3D de hardware (tarjeta de vídeo de 32MB 100% compatible con DirectX 9.0b y Hardware T&L y los controladores más recientes*), Microsoft Windows 98/ME/2000/XP, procesador Pentium III a 600MHz o Athlon a 600MHz o superior para equipos con Windows 98/ME, procesador Pentium III a 700MHz o Athlon a 700MHz o superior para equipos con Windows 2000/XP, 128MB de RAM, 1,4GB de espacio libre en el disco duro sin comprimir (más 400MB para el archivo de intercambio de Windows 98/ME o 600MB para el archivo de intercambio de Windows 2000/XP), tarjeta de sonido de 16bits 100% compatible con DirectX 9.0b y los controladores más recientes, ratón y teclado 100% compatibles con Windows 98/ME/2000/XP y los controladores más recientes, DirectX 9.0b (incluido)"></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="desarrollador">Desarrollador *</label>
+                            <input id="desarrollador" type="text" class="form-control"
+                                placeholder="Ej: Sledgehammer Games, Treyarch, Infinity Ward, Beenox, Raven Software, High Moon Studios, Demonware" />
+                        </div>
+
+                        <div class="alert alert-danger mt-3 d-none" role="alert" id="alerta"></div>
+                        <button class="btn btn-outline-verde" type="submit">
+                            Enviar
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <footer class="bgFooter">
         <div class="container pt-3">
             <div class="row text-center text-lg-start">
