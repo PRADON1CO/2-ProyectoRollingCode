@@ -12,6 +12,7 @@ const imagen = document.getElementById("imagen");
 const categoria = document.getElementById("categoria");
 const requisitos = document.getElementById("requisitos");
 const desarrollador = document.getElementById("desarrollador");
+const listaJuegos = [];
 
 function mostrarModalJuego() {
   crearJuego = true;
@@ -36,6 +37,8 @@ function altaJuego() {
     requisitos.value,
     desarrollador.value
   );
+  listaJuegos.push(juegoNuevo);
+  console.log(listaJuegos);
 }
 
 btnAgregarJuego.addEventListener("click", mostrarModalJuego);
