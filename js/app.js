@@ -12,7 +12,7 @@ const imagen = document.getElementById("imagen");
 const categoria = document.getElementById("categoria");
 const requisitos = document.getElementById("requisitos");
 const desarrollador = document.getElementById("desarrollador");
-const listaJuegos = [];
+const listaJuegos = JSON.parse(localStorage.getItem("listaJuegosKey")) || [];
 
 function mostrarModalJuego() {
   crearJuego = true;
@@ -39,10 +39,15 @@ function altaJuego() {
   );
   listaJuegos.push(juegoNuevo);
   guardarLocalStorage();
+  limpiarFormJuego();
 }
 
 function guardarLocalStorage() {
   localStorage.setItem("listaJuegosKey", JSON.stringify(listaJuegos));
+}
+
+function limpiarFormJuego() {
+  formJuego.reset();
 }
 
 btnAgregarJuego.addEventListener("click", mostrarModalJuego);
