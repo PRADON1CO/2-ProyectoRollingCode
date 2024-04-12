@@ -40,6 +40,7 @@ function altaJuego() {
   listaJuegos.push(juegoNuevo);
   guardarLocalStorage();
   limpiarFormJuego();
+  dibujarFila(juegoNuevo);
 }
 
 function guardarLocalStorage() {
@@ -48,6 +49,40 @@ function guardarLocalStorage() {
 
 function limpiarFormJuego() {
   formJuego.reset();
+}
+
+function dibujarFila(juego) {
+  console.log(juego);
+  const tbody = document.querySelector("#tablaJuegos");
+  tbody.innerHTML += `<tr data-id="${juego.codigo}">
+    <th scope="row" class="colId">${juego.codigo}</th>
+    <td >${juego.nombre}</td>
+    <td class="">
+      $${juego.precio}
+    </td>
+    <td>
+      <img
+        class="img-thumbnail rounded img-fluid thumbnail"
+        src=${juego.imagen}
+        alt=${juego.nombre}
+      />
+    </td>
+    <td>${juego.categoria}</td>
+    <td>
+      <button
+        class="btn btn-warning m-1"
+        onclick=""
+      >
+        <i class="bi bi-pencil-square fs-4"></i>
+      </button>
+      <button
+        class="btn btn-danger m-1"
+        onclick=""
+      >
+        <i class="bi bi-x-square fs-4"></i>
+      </button>
+    </td>
+  </tr>`;
 }
 
 btnAgregarJuego.addEventListener("click", mostrarModalJuego);
