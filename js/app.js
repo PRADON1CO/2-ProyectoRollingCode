@@ -51,6 +51,12 @@ function limpiarFormJuego() {
   formJuego.reset();
 }
 
+function cargaInicial() {
+  if (listaJuegos.length > 0) {
+    listaJuegos.map((juego) => dibujarFila(juego));
+  }
+}
+
 function dibujarFila(juego) {
   console.log(juego);
   const tbody = document.querySelector("#tablaJuegos");
@@ -87,3 +93,5 @@ function dibujarFila(juego) {
 
 btnAgregarJuego.addEventListener("click", mostrarModalJuego);
 formJuego.addEventListener("submit", administrarFormJuego);
+
+cargaInicial();
