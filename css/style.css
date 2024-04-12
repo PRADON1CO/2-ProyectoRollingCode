@@ -124,9 +124,6 @@ body {
     background: #444;
   }
 
-  .login-main {
-    backdrop-filter: blur(3px);
-  }
 
   .login-box {
     width: 30%;
@@ -136,7 +133,6 @@ body {
   }
 
   .body-login {
-    background-image: url("../img/background-login.jpg");
     background-position: center;
     background-repeat: repeat;
   }
