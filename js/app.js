@@ -75,18 +75,12 @@ function dibujarFila(juego) {
     </td>
     <td>${juego.categoria}</td>
     <td>
-      <button
-        class="btn btn-warning m-1"
-        onclick=""
-      >
-        <i class="bi bi-pencil-square fs-4"></i>
-      </button>
-      <button
-        class="btn btn-danger m-1"
-        onclick=""
-      >
-        <i class="bi bi-x-square fs-4"></i>
-      </button>
+        <button class="btn btn-outline-verde m-1">
+          <i class="bi bi-pencil-square fs-4"></i>
+        </button>
+        <button class="btn btn-outline-verde m-1">
+          <i class="bi bi-x-square fs-4"></i>
+        </button>
     </td>
   </tr>`;
 }
