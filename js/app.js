@@ -16,6 +16,7 @@ const listaJuegos = JSON.parse(localStorage.getItem("listaJuegosKey")) || [];
 
 function mostrarModalJuego() {
   crearJuego = true;
+  limpiarFormJuego()
   modalJuego.show();
 }
 
@@ -24,6 +25,7 @@ function administrarFormJuego(e) {
   if (crearJuego === true) {
     altaJuego();
   } else {
+    editarJuego()
   }
 }
 
@@ -64,7 +66,7 @@ function dibujarFila(juego) {
     <th scope="row" class="colId">${juego.codigo}</th>
     <td >${juego.nombre}</td>
     <td class="">
-      $${juego.precio}
+      ${juego.precio}
     </td>
     <td>
       <img
@@ -99,6 +101,32 @@ window.prepararEditarJuego = (idJuego) => {
   precio.value = juegoBuscada.precio;
   requisitos.value = juegoBuscada.requisitos;
 };
+
+function editarJuego() {
+  let posicionJuego = listaJuegos.findIndex((juego) => juego.codigo === codigo.value);
+  listaJuegos[posicionJuego].nombre = nombre.value;
+  listaJuegos[posicionJuego].imagen = imagen.value;
+  listaJuegos[posicionJuego].descripcion = descripcion.value;
+  listaJuegos[posicionJuego].categoria = categoria.value;
+  listaJuegos[posicionJuego].desarrollador = desarrollador.value;
+  listaJuegos[posicionJuego].requisitos = requisitos.value;
+  listaJuegos[posicionJuego].precio = precio.value;
+  
+  guardarLocalStorage();
+  const tbody = document.querySelector("#tablaJuegos");
+  tbody.children[posicionJuego].children[1].innerHTML = nombre.value;
+  tbody.children[posicionJuego].children[2].innerHTML = precio.value;
+  tbody.children[posicionJuego].children[3].children[0].src = imagen.value;
+  tbody.children[posicionJuego].children[4].innerHTML = categoria.value;
+  Swal.fire(
+    "Juego modificado",
+    "El juego fue modificada exitosamente",
+    "success"
+  );
+  limpiarFormJuego();
+  modalJuego.hide();
+}
+
 
 btnAgregarJuego.addEventListener("click", mostrarModalJuego);
 formJuego.addEventListener("submit", administrarFormJuego);
