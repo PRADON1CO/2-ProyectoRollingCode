@@ -76,7 +76,7 @@ function dibujarFila(juego) {
     <td>${juego.categoria}</td>
     <td>
         <button class="btn btn-outline-verde m-1">
-          <i class="bi bi-pencil-square fs-4"></i>
+          <i class="bi bi-pencil-square fs-4" onclick="prepararEditarJuego('${juego.codigo}')"></i>
         </button>
         <button class="btn btn-outline-verde m-1">
           <i class="bi bi-x-square fs-4"></i>
@@ -84,6 +84,21 @@ function dibujarFila(juego) {
     </td>
   </tr>`;
 }
+
+window.prepararEditarJuego = (idJuego) => {
+  mostrarModalJuego();
+  crearJuego = false;
+  const juegoBuscada = listaJuegos.find((juego) => juego.codigo === idJuego);
+  
+  codigo.value = juegoBuscada.codigo;
+  nombre.value = juegoBuscada.nombre;
+  descripcion.value = juegoBuscada.descripcion;
+  categoria.value = juegoBuscada.categoria;
+  imagen.value = juegoBuscada.imagen;
+  desarrollador.value = juegoBuscada.desarrollador;
+  precio.value = juegoBuscada.precio;
+  requisitos.value = juegoBuscada.requisitos;
+};
 
 btnAgregarJuego.addEventListener("click", mostrarModalJuego);
 formJuego.addEventListener("submit", administrarFormJuego);
