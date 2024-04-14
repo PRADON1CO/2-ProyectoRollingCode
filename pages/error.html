@@ -13,7 +13,7 @@
     />
     <meta
       name="author"
-      content="Claudia Alejandra Lopez, Esteban Alejandro Lopez, Prado Brian Nicolas, Valdez Natasha"
+      content="Claudia Alejandra Lopez, Esteban Alejandro Lopez, Prado Brian Nicolas, valdez Natasha"
     />
     <link
       rel="stylesheet"
@@ -26,9 +26,8 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="../css/style.css" />
-    <title>Ingresa a tu cuenta</title>
+    <title>Error 404</title>
   </head>
-
   <body>
     <header>
       <nav class="navbar navbar-expand-lg bg-body-tertiary">
@@ -58,14 +57,16 @@
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link active" href="login.html">Login</a>
+                <a class="nav-link" href="#">Login</a>
               </li>
               <li class="nav-item">
-                 <a class="nav-link" href="./acercadenosotros">Nosotros</a>
+                <a class="nav-link" href="./pages/acercadenosotros.html"
+                  >Nosotros</a
+                >
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="./administrador.html"
-                  >Administrador</a
+                  >Asministrador</a
                 >
               </li>
             </ul>
@@ -84,41 +85,20 @@
         </div>
       </nav>
     </header>
-    <main class="login-main">
-      <section class="container px-3 text-light d-flex justify-content-center">
-        <div class="login-box">
-          <h2 class="mb-3">Iniciar sesión</h2>
-          <form action="#">
-            <div class="input-box position-relative">
-              <input type="text" id="email" required maxlength="15" minlength="8" />
-              <label for="email"
-                >Nombre de usuario</label
-              >
-            </div>
-            <div class="input-box mb-5">
-              <input type="password" id="password" required maxlength="7" minlength="5"/>
-              <label for="password">Contraseña</label>
-            </div>
-            <button type="submit" class="btn w-100 boton-iniciar-sesion">
-              Iniciar sesión
-            </button>
-            <div class="d-flex my-3">
-              <p><a href="./error.html" class="ms-auto">¿Olvidaste tu contraseña?</a></p>
-            </div>
-            <p class="fs-6">
-              ¿Nuevo en Gaming?
-              <a href="./error.html">Registrate ahora</a>
-            </p>
-          </form>
-        </div>
+    <main>
+      <section>
+        <img
+          src="../img/image-error.png"
+          alt=" imagen de un joystick que avisa de un error 404"
+          class="w-100 position-relative img-error"
+        />
       </section>
     </main>
-
     <footer class="bgFooter">
       <div class="container pt-3">
         <div class="row text-center text-lg-start">
           <div class="col-12 col-md-4 col-lg-4">
-            <a href="../index.html"
+            <a href="./index.html"
               ><img
                 src="../img/LogoSinFondo.png"
                 alt="Logo Gaming Shop"

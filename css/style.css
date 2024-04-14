@@ -1,142 +1,161 @@
-
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    background: #f5f5f5;
-  }
-  
-  main {
-    flex-grow: 1;
-  }
-  
-  .bgFooter {
-    background: #042b2c;
-  }
-  
-  .imgLogoNav {
-    width: 100px;
-    height: 100px;
-    object-fit: contain;
-    border-radius: 10px;
-  }
-  
-  .imgLogoFooter {
-    width: 120px;
-    height: 120px;
-    object-fit: contain;
-  }
-  
-  .btn-outline-verde{
-    color: #042b2c;
-    border-color: #042b2c;
-  }
-  
-  .btn-outline-verde:hover{
-    background-color: #042b2c;
-    color: #fff;
-  }
-  
-  .card:hover {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transform: scale(1.01); 
-  }
-  
-  /* login */
-  .login-box {
-    width: 30%;
-    border-radius: 4px;
-    margin-top: 50px;
-  }
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: #f5f5f5;
+}
 
-  .login-main {
-    background-color:#f5f5f5;
-  }
-  
-  .login-box h2 {
-    color: #ece8e8;
-    font-size: 2rem;
-  }
-  
-  form .input-box {
-    position: relative;
-    height: 50px;
-    margin-bottom: 16px;
-  }
-  
-  form p,
-  a {
-    font-size: 17px;
-  }
-  
-  .input-box input {
-    height: 100%;
-    width: 100%;
-    border-radius: 4px;
-    background: #333;
-    outline: none;
-    border: none;
-    color: #f8f5f5;
-    font-size: 1rem;
-  }
-  
-  .input-box label {
-    position: absolute;
-    left: 20px;
-    top: 50%;
-    color: #8c8c8c;
-    pointer-events: none;
-    font-size: 1rem;
-    transform: translateY(-50%);
-    transition: all 0.1s ease;
-  }
-  
-  .boton-iniciar-sesion {
-    height: 50px;
-    background: rgb(49, 145, 121);
-    background: linear-gradient(
-      0deg,
-      rgb(49, 145, 116) 10%,
-      rgb(68, 205, 153) 50%
-    );
-    color: black;
-    font-weight: 500;
-    font-size: 18px;
-  }
-  
-  .boton-iniciar-sesion:hover {
-    color: black;
-  }
+main {
+  flex-grow: 1;
+}
 
-  .input-box input:is(:focus, :valid) ~ label {
-    font-size: 0.75rem;
-    transform: translateY(-130%);
-  }
-  
-  .input-box input:is(:focus, :valid) {
-    padding: 16px 20px 0;
-    background: #444;
-  }
+.bgFooter {
+  background: #042b2c;
+}
 
+.imgLogoNav {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  border-radius: 10px;
+}
 
-  .login-box {
-    width: 30%;
-    background: #042b2c;
-    margin: 49px 0;
-    padding: 70px 14px;
+.imgLogoFooter {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+}
+
+.btn-outline-verde {
+  color: #042b2c;
+  border-color: #042b2c;
+}
+
+.btn-outline-verde:hover {
+  background-color: #042b2c;
+  color: #fff;
+}
+
+.card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transform: scale(1.01);
+}
+
+.thumbnail {
+  max-width: 100px;
+}
+
+.colId {
+  width: 10%; /* Ancho personalizado */
+}
+
+/* imagen error*/
+@media (max-width: 576px) {
+  .img-error {
+    height: 89vh;
+    object-fit: cover;
   }
+}
 
-  .body-login {
-    background-position: center;
-    background-repeat: repeat;
+@media all and (min-width: 767px) and (max-width: 1200px) {
+  .img-error {
+    height: 89vh;
+    object-fit: cover;
   }
+}
+/* login */
+.login-box {
+  width: 30%;
+  border-radius: 4px;
+  margin-top: 50px;
+}
 
+.login-main {
+  background-color: #f5f5f5;
+}
+
+.login-box h2 {
+  color: #ece8e8;
+  font-size: 2rem;
+}
+
+form .input-box {
+  position: relative;
+  height: 50px;
+  margin-bottom: 16px;
+}
+
+form p,
+a {
+  font-size: 17px;
+}
+
+.input-box input {
+  height: 100%;
+  width: 100%;
+  border-radius: 4px;
+  background: #333;
+  outline: none;
+  border: none;
+  color: #f8f5f5;
+  font-size: 1rem;
+}
+
+.input-box label {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  color: #8c8c8c;
+  pointer-events: none;
+  font-size: 1rem;
+  transform: translateY(-50%);
+  transition: all 0.1s ease;
+}
+
+.boton-iniciar-sesion {
+  height: 50px;
+  background: rgb(49, 145, 121);
+  background: linear-gradient(
+    0deg,
+    rgb(49, 145, 116) 10%,
+    rgb(68, 205, 153) 50%
+  );
+  color: black;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.boton-iniciar-sesion:hover {
+  color: black;
+}
+
+.input-box input:is(:focus, :valid) ~ label {
+  font-size: 0.75rem;
+  transform: translateY(-130%);
+}
+
+.input-box input:is(:focus, :valid) {
+  padding: 16px 20px 0;
+  background: #444;
+}
+
+.login-box {
+  width: 30%;
+  background: #042b2c;
+  margin: 49px 0;
+  padding: 70px 14px;
+}
+
+.body-login {
+  background-position: center;
+  background-repeat: repeat;
+}
 
 @media (max-width: 991px) {
   .login-box {
