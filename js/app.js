@@ -81,7 +81,7 @@ function dibujarFila(juego) {
           <i class="bi bi-pencil-square fs-4" onclick="prepararEditarJuego('${juego.codigo}')"></i>
         </button>
         <button class="btn btn-outline-verde m-1">
-          <i class="bi bi-x-square fs-4"></i>
+          <i class="bi bi-x-square fs-4" onclick="borrarJuego('${juego.codigo}')"></i>
         </button>
     </td>
   </tr>`;
@@ -91,7 +91,7 @@ window.prepararEditarJuego = (idJuego) => {
   mostrarModalJuego();
   crearJuego = false;
   const juegoBuscada = listaJuegos.find((juego) => juego.codigo === idJuego);
-  
+
   codigo.value = juegoBuscada.codigo;
   nombre.value = juegoBuscada.nombre;
   descripcion.value = juegoBuscada.descripcion;
@@ -111,7 +111,7 @@ function editarJuego() {
   listaJuegos[posicionJuego].desarrollador = desarrollador.value;
   listaJuegos[posicionJuego].requisitos = requisitos.value;
   listaJuegos[posicionJuego].precio = precio.value;
-  
+
   guardarLocalStorage();
   const tbody = document.querySelector("#tablaJuegos");
   tbody.children[posicionJuego].children[1].innerHTML = nombre.value;
@@ -127,6 +127,34 @@ function editarJuego() {
   modalJuego.hide();
 }
 
+window.borrarJuego = (idJuego) => {
+  Swal.fire({
+    title: "¿Estas seguro de borrar el Juego?",
+    text: "No puedes revertir este paso",
+    icon: "warning",
+    showCancelButton: true,
+    confirmButtonColor: "#042b2c",
+    cancelButtonColor: "#d33",
+    confirmButtonText: "Borrar",
+    cancelButtonText: "Cancelar",
+  }).then((result) => {
+    if (result.isConfirmed) {
+      const posicionJuego = listaJuegos.findIndex(
+        (itemJuego) => itemJuego.codigo === idJuego
+      );
+      console.log(posicionJuego);
+      listaJuegos.splice(posicionJuego, 1);
+      guardarLocalStorage();
+      const tbody = document.querySelector("#tablaJuegos");
+      tbody.removeChild(tbody.children[posicionJuego]);
+      Swal.fire({
+        title: "Juego eliminado",
+        text: `El juego fue eliminado correctamente`,
+        icon: "success",
+      });
+    }
+  });
+};
 
 btnAgregarJuego.addEventListener("click", mostrarModalJuego);
 formJuego.addEventListener("submit", administrarFormJuego);
