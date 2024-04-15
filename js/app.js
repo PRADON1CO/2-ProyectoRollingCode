@@ -43,6 +43,11 @@ function altaJuego() {
   guardarLocalStorage();
   limpiarFormJuego();
   dibujarFila(juegoNuevo);
+  Swal.fire({
+    title: "Pelicula Creada",
+    text: `La juego "${juegoNuevo.nombre}" fue crada correctamente`,
+    icon: "success",
+  });
 }
 
 function guardarLocalStorage() {
