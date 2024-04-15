@@ -54,8 +54,8 @@ main {
 .colId {
   width: 10%; /* Ancho personalizado */
 }
-/* imagen error*/
 
+/* imagen error*/
 @media (max-width: 576px) {
   .img-error {
     height: 89vh;
@@ -145,10 +145,6 @@ a {
   background: #444;
 }
 
-.login-main {
-  backdrop-filter: blur(3px);
-}
-
 .login-box {
   width: 30%;
   background: #042b2c;
@@ -157,7 +153,6 @@ a {
 }
 
 .body-login {
-  background-image: url("../img/background-login.jpg");
   background-position: center;
   background-repeat: repeat;
 }
