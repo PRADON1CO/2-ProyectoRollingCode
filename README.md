@@ -1,5 +1,5 @@
 <div align= "center">
-    <a href='https://gamingshop.netlify.app'>
+    <a href='https://gamingshopp.netlify.app/'>
     <img src='./img/LogoSinFondo.png' alt='Gaming Shop' width='300' />
     </a>
     <h1>GAMING SHOP</h1>
@@ -7,20 +7,20 @@
     Principal referente en Argentina en el ambito de los videojuegos,
     Gaming Shop se destaca<br> por ofrecer la mas destacadas ofertas y descuentos en un amplio catalogo.
     <br>
-    <a href='https://gamingshop.netlify.app'>
+    <a href='https://gamingshopp.netlify.app/'>
     <strong>Explorar pagina » </strong>
     </a>
     <br>
     <br>
-    <a href='https://gamingshop.netlify.app'>
+    <a href='https://gamingshopp.netlify.app/'>
     Reportar un problema
     </a>
     ·
-    <a href='https://gamingshop.netlify.app'>
+    <a href='https://gamingshopp.netlify.app/'>
     Solicitar una mejora
     </a>
     ·
-    <a href='https://gamingshop.netlify.app'>
+    <a href='https://gamingshopp.netlify.app/'>
     Soporte
     </a>
     </p>
