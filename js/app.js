@@ -44,7 +44,7 @@ function altaJuego() {
   limpiarFormJuego();
   dibujarFila(juegoNuevo);
   Swal.fire({
-    title: "Pelicula Creada",
+    title: "Juego Creado",
     text: `La juego "${juegoNuevo.nombre}" fue crada correctamente`,
     icon: "success",
   });
